@@ -1,5 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { CartWidgetComponent } from '../CartWidgetComponent';
+
 
 export function NavBarComponent() {
   return (
@@ -12,7 +14,8 @@ export function NavBarComponent() {
             <Nav.Link href="#pedidos">Accesorios</Nav.Link>
             <Nav.Link href="#decoracion">Decoracion</Nav.Link>
             <Nav.Link href="#hogar">Hogar</Nav.Link>
-            <Nav.Link href="#carrito">Carrito</Nav.Link>
+            <Nav.Link href="#carrito"><CartWidgetComponent/></Nav.Link>
+            
           </Nav>
         </Container>
       </Navbar>
