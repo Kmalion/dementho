@@ -4,6 +4,7 @@ import { Card, CardGroup} from 'react-bootstrap'
 export function ItemListContainerComponent() {
   return (
     <div>
+        <h1 className='title text-center'>Listado de categorias general</h1>
         <CardGroup>
       <Card>
         <Card.Img variant="top" src="https://img.freepik.com/foto-gratis/zapatos-moda-zapatillas_1203-7529.jpg?w=1380&t=st=1679359658~exp=1679360258~hmac=8407e6fa5873dadea6df9654330b9064e991c4fe3e908a9e00ac7c4712be4339  " />
