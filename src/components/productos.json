@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "referencia": "Blue-roms",
+        "categoria": "Zapatos",
+        "color": "Azul prime",
+        "precio": 40.5,
+        "imagen": "https://img.freepik.com/foto-gratis/par-entrenadores_144627-3800.jpg?w=740&t=st=1679963945~exp=1679964545~hmac=c6317e2fe4856f77a61d0f7025c57f96bfe4ee6cff3902789293090338a0574d",
+        "descripcion": "El calzado deportivo o zapatillas de deporte es un tipo de calzado que se utiliza"
+    },
+    {
+        "id": 2,
+        "referencia": "Belt-w",
+        "categoria": "Accesorios",
+        "color": "Cafe",
+        "precio": 10.5,
+        "imagen": "https://img.freepik.com/fotos-premium/cinturon-aislado-sobre-fondo-blanco_309409-483.jpg?w=740&t",
+        "descripcion": "1. m. Tira, especialmente de cuero y en general provista de una hebilla, que se usa para sujetar o ceñir a la cintura una prenda de vestir. "
+    },
+    {
+        "id": 3,
+        "referencia": "45-Mat",
+        "categoria": "Decoracion",
+        "color": "Blanca",
+        "precio": 20.5,
+        "imagen": "https://img.freepik.com/foto-gratis/planta-nido-pajaros-maceta-beige_53876-134284.jpg?w=740&t=st=1679971643~exp=1679972243~hmac=eb825e43eb35772786352406c4b77786ad59758728e8362733926fa332778b2e",
+        "descripcion": " Recipiente, generalmente de barro cocido, que suele tener un agujero en la parte inferior, y que, lleno de tierra, sirve para cultivar plantas."
+    },
+    {
+        "id": 4,
+        "referencia": "Chair B",
+        "categoria": "Hogar",
+        "color": "Verde pistacho",
+        "precio": "$412.20",
+        "imagen": "https://img.freepik.com/foto-gratis/muebles-modernos-estudios-estilo-vida-verde_1122-1837.jpg?1&w=1380&t=st=1679971954~exp=1679972554~hmac=b214f9d63e5500cae3d032fc3167be04db3b6c2513f3df93d8ce93f0aa933ff0",
+        "descripcion": "La silla es un mueble que suele tener un respaldo, generalmente cuenta con tres o cuatro apoyos y su finalidad es la de servir de asiento a una persona.​ "
+    },
+    {
+        "id": 5,
+        "referencia": "Mesa-R",
+        "categoria": "Hogar",
+        "color": "Madera",
+        "precio": "$156.26",
+        "imagen": "https://img.freepik.com/foto-gratis/foto-botella-vidrio-pajita-negra-llena-bebida-mesa-madera-marron_181624-1670.jpg?w=740&t=st=1679972318~exp=1679972918~hmac=56ac8dff3e32467fc9ea9e5044646d3fc16275d2d87755c90409e4089d16dfab",
+        "descripcion": "Una mesa es un mueble compuesto por un mínimo de una tabla lisa que es sostenida por una o más patas (también llamadas pies)."
+    },
+    {
+        "id": 6,
+        "referencia": "BootsR",
+        "categoria": "Zapatos",
+        "color": "Verde",
+        "precio": "$50",
+        "imagen": "https://img.freepik.com/fotos-premium/botas-goma_739536-3079.jpg?w=740",
+        "descripcion": "Botas para mujer verdes altas para invierno"
+    },
+    {
+        "id": 7,
+        "referencia": "LampT",
+        "categoria": "Decoracion",
+        "color": "Negro",
+        "precio": 10.5,
+        "imagen": "https://img.freepik.com/foto-gratis/decoracion-lampara_1203-7742.jpg?w=740&t=st=1679972586~exp=1679973186~hmac=b1105a49ec74d86c1563cfca8783265bcb3695aede480717eb7cd7b3cec342aa",
+        "descripcion": "Lampara para decoracion de exteriores"
+    },
+    {
+        "id": 8,
+        "referencia": "Sombre!",
+        "categoria": "Accesroios",
+        "color": "Camel",
+        "precio": 40.5,
+        "imagen": "https://img.freepik.com/foto-gratis/sombrero-fieltro_1101-691.jpg?w=740&t=st=1679972714~exp=1679973314~hmac=24912d9f2a5e026268266c1ce7c77531f8315ec07beb6fb63a9c8f9759df73ad",
+        "descripcion": "Sombrero para hombre con cinta cafe"
+    }
+]
