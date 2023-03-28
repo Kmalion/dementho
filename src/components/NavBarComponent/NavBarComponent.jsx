@@ -1,6 +1,8 @@
 import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavItem } from 'react-bootstrap'
 import { CartWidgetComponent } from '../CartWidgetComponent';
+import NavItems from './NavItems';
+import './NavItems.css'
 
 
 export function NavBarComponent() {
@@ -8,13 +10,13 @@ export function NavBarComponent() {
     <>
     <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">DEMENTHO</Navbar.Brand>
+          <Navbar.Brand><NavItems styles="text-decoration:none" label="DEMENTO" src="/"/></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#productos">Zapatos</Nav.Link>
-            <Nav.Link href="#accesorios">Accesorios</Nav.Link>
-            <Nav.Link href="#decoracion">Decoracion</Nav.Link>
-            <Nav.Link href="#hogar">Hogar</Nav.Link>
-            <Nav.Link href="#carrito"><CartWidgetComponent/></Nav.Link>
+            <Nav className='Ro'><NavItems label="Zapatos" src="/zapatos"/></Nav>
+            <Nav className='Ro'><NavItems label="Accesorios" src="/accesorios"/></Nav>
+            <Nav className='Ro'><NavItems label="Decoracion" src="/decoracion"/></Nav>
+            <Nav className='Ro'><NavItems label="Hogar" src="/hogar"/></Nav>
+            <Nav className='Ro'><CartWidgetComponent/> <NavItems label=" Carrito" src="/carrito"/></Nav>
           </Nav>
         </Container>
       </Navbar>

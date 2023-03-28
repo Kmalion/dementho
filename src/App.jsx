@@ -1,12 +1,11 @@
 import { MainLayout } from "./layouts";
+import { MainRoutes } from "./routes";
 
 function App() {
   
   return (
     <MainLayout>
-    <div>
-
-    </div>
+    <MainRoutes />
     </MainLayout>
   );
 }
