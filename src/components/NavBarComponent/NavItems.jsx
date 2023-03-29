@@ -1,11 +1,11 @@
 import React from 'react'
-import './NavItems.css'
+import { Link } from 'react-router-dom'
+import './NavItem.css'
 
 
-const NavItems = ({label, src}) => {
+export const NavItems = ({label, src}) => {
   return (
-    <a href={src}>{label}</a>
+    <Link to={src} className="Ro">{label}</Link>
   )
 }
 
-export default NavItems
