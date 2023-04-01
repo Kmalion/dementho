@@ -14,10 +14,10 @@ export function NavBarComponent() {
           <Navbar.Brand> 
             <NavItems styles="text-decoration:none" label="DEMENTHO" src="/"/></Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link><NavItems label="Zapatos" src="/zapatos"/></Nav.Link>
-            <Nav.Link><NavItems label="Accesorios" src="/accesorios"/></Nav.Link>
-            <Nav.Link><NavItems label="Decoracion" src="/decoracion"/></Nav.Link>
-            <Nav.Link><NavItems label="Hogar" src="/hogar"/></Nav.Link>
+            <Nav.Link><NavItems label="Zapatos" src='category/zapatos'/></Nav.Link>
+            <Nav.Link><NavItems label="Accesorios" src="category/accesorios"/></Nav.Link>
+            <Nav.Link><NavItems label="Decoracion" src="category/decoracion"/></Nav.Link>
+            <Nav.Link><NavItems label="Hogar" src="/category/hogar"/></Nav.Link>
             <Nav.Link><CartWidgetComponent/> <NavItems label=" Carrito" src="/carrito"/></Nav.Link>
           </Nav>
         </Container>
