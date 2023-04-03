@@ -31,7 +31,7 @@
         "referencia": "Chair B",
         "categoria": "hogar",
         "color": "Verde pistacho",
-        "precio": "$412.20",
+        "precio": 412.20,
         "imagen": "https://img.freepik.com/foto-gratis/muebles-modernos-estudios-estilo-vida-verde_1122-1837.jpg?1&w=1380&t=st=1679971954~exp=1679972554~hmac=b214f9d63e5500cae3d032fc3167be04db3b6c2513f3df93d8ce93f0aa933ff0",
         "descripcion": "La silla es un mueble que suele tener un respaldo, generalmente cuenta con tres o cuatro apoyos y su finalidad es la de servir de asiento a una persona.​ "
     },
@@ -40,7 +40,7 @@
         "referencia": "Mesa-R",
         "categoria": "hogar",
         "color": "Madera",
-        "precio": "$156.26",
+        "precio": 156.26,
         "imagen": "https://img.freepik.com/foto-gratis/foto-botella-vidrio-pajita-negra-llena-bebida-mesa-madera-marron_181624-1670.jpg?w=740&t=st=1679972318~exp=1679972918~hmac=56ac8dff3e32467fc9ea9e5044646d3fc16275d2d87755c90409e4089d16dfab",
         "descripcion": "Una mesa es un mueble compuesto por un mínimo de una tabla lisa que es sostenida por una o más patas (también llamadas pies)."
     },
@@ -49,7 +49,7 @@
         "referencia": "BootsR",
         "categoria": "zapatos",
         "color": "Verde",
-        "precio": "$50",
+        "precio": 50,
         "imagen": "https://img.freepik.com/fotos-premium/botas-goma_739536-3079.jpg?w=740",
         "descripcion": "Botas para mujer verdes altas para invierno"
     },
@@ -103,7 +103,7 @@
         "referencia": "Vajilla Kit",
         "categoria": "hogar",
         "color": "Blanco",
-        "precio": "$42.20",
+        "precio": 42.20,
         "imagen": "https://img.freepik.com/psd-gratis/elementos-vajilla-estante-madera_176382-1729.jpg?w=1380&t=st=1680380054~exp=1680380654~hmac=cf96f29dcc6c04c64cf9e864f90723f0652608a33bb87a1575f7aef9d0b86c63",
         "descripcion": "La silla es un mueble que suele tener un respaldo, generalmente cuenta con tres o cuatro apoyos y su finalidad es la de servir de asiento a una persona.​ "
     },
@@ -112,7 +112,7 @@
         "referencia": "Lampara de T",
         "categoria": "hogar",
         "color": "Negro",
-        "precio": "$16.26",
+        "precio": 16.26,
         "imagen": "https://img.freepik.com/foto-gratis/lamparas-modernas-decorativas_23-2148164840.jpg?w=1380&t=st=1680380148~exp=1680380748~hmac=1bd89a27300f0243b0846757ae993a50ddafb04695a3d4fcca453bbd16830059",
         "descripcion": "Una mesa es un mueble compuesto por un mínimo de una tabla lisa que es sostenida por una o más patas (también llamadas pies)."
     },
@@ -121,7 +121,7 @@
         "referencia": "GrayR",
         "categoria": "zapatos",
         "color": "Gris",
-        "precio": "$30",
+        "precio": 30,
         "imagen": "https://img.freepik.com/foto-gratis/zapatos-moda-zapatillas_1203-7529.jpg?w=1380&t=st=1680380219~exp=1680380819~hmac=7e7b687e8acd39c68be93ba4ce48f7fb51bda98cdf4839cb6dac2975167406f8",
         "descripcion": "Zapatos deportivos para Hombre"
     },
