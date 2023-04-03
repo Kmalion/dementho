@@ -8,7 +8,6 @@ import data from '../components/productos.json'
 export const ItemCategoryContainer = () => {
 
     const { categoryId } = useParams();
-    console.log(categoryId);
     const [ items ] = useState (data);
     const resultado = items.filter(e => e.categoria === categoryId);
 

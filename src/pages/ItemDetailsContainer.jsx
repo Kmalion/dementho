@@ -8,17 +8,21 @@ export const ItemDetailsContainer = () => {
     const {productoId} = useParams();
     console.log(productoId); 
     const [items] = useState(data);
+    console.log("data",items);
+    console.log(data);
+
     const resultado = items.filter(e => e.id === productoId)
     console.log(resultado); 
 
     return (
-        
+
         <div className="row mt-5">
             
         {
             
         <Col>
-        <Card>
+        <h2>Detalle producto {resultado.id}</h2>
+        <Card >
         <Card.Img style={{height:300}} variant="top" src={ resultado.imagen }  />
         <Card.Body style={{height:300}}>
           <Card.Title>{resultado.referencia } </Card.Title>
