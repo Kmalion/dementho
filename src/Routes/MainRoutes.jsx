@@ -18,7 +18,6 @@ export const MainRoutes = () => {
             <Route exact path="/category/:categoryId" element={<ItemCategoryContainer />}/>
             <Route exact path="/details/:productoId" element={<ItemDetailsContainer />}/>
             <Route exact path="/carrito" element={<Carrito />}/>
-            
         </Routes>
         </CardGroup>
       </div>

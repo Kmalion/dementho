@@ -5,6 +5,7 @@
         "categoria": "zapatos",
         "color": "Azul prime",
         "precio": 40.5,
+        "stock": 30,
         "imagen": "https://img.freepik.com/foto-gratis/par-entrenadores_144627-3800.jpg?w=740&t=st=1679963945~exp=1679964545~hmac=c6317e2fe4856f77a61d0f7025c57f96bfe4ee6cff3902789293090338a0574d",
         "descripcion": "El calzado deportivo o zapatillas de deporte es un tipo de calzado que se utiliza"
     },
@@ -14,6 +15,7 @@
         "categoria": "accesorios",
         "color": "Cafe",
         "precio": 10.5,
+        "stock": 10,
         "imagen": "https://img.freepik.com/fotos-premium/cinturon-aislado-sobre-fondo-blanco_309409-483.jpg?w=740&t",
         "descripcion": "1. m. Tira, especialmente de cuero y en general provista de una hebilla, que se usa para sujetar o ceñir a la cintura una prenda de vestir. "
     },
@@ -23,6 +25,7 @@
         "categoria": "decoracion",
         "color": "Blanca",
         "precio": 20.5,
+        "stock": 5,
         "imagen": "https://img.freepik.com/foto-gratis/planta-nido-pajaros-maceta-beige_53876-134284.jpg?w=740&t=st=1679971643~exp=1679972243~hmac=eb825e43eb35772786352406c4b77786ad59758728e8362733926fa332778b2e",
         "descripcion": " Recipiente, generalmente de barro cocido, que suele tener un agujero en la parte inferior, y que, lleno de tierra, sirve para cultivar plantas."
     },
@@ -32,6 +35,7 @@
         "categoria": "hogar",
         "color": "Verde pistacho",
         "precio": 412.20,
+        "stock": 4,
         "imagen": "https://img.freepik.com/foto-gratis/muebles-modernos-estudios-estilo-vida-verde_1122-1837.jpg?1&w=1380&t=st=1679971954~exp=1679972554~hmac=b214f9d63e5500cae3d032fc3167be04db3b6c2513f3df93d8ce93f0aa933ff0",
         "descripcion": "La silla es un mueble que suele tener un respaldo, generalmente cuenta con tres o cuatro apoyos y su finalidad es la de servir de asiento a una persona.​ "
     },
@@ -41,6 +45,7 @@
         "categoria": "hogar",
         "color": "Madera",
         "precio": 156.26,
+        "stock": 3,
         "imagen": "https://img.freepik.com/foto-gratis/foto-botella-vidrio-pajita-negra-llena-bebida-mesa-madera-marron_181624-1670.jpg?w=740&t=st=1679972318~exp=1679972918~hmac=56ac8dff3e32467fc9ea9e5044646d3fc16275d2d87755c90409e4089d16dfab",
         "descripcion": "Una mesa es un mueble compuesto por un mínimo de una tabla lisa que es sostenida por una o más patas (también llamadas pies)."
     },
@@ -50,6 +55,7 @@
         "categoria": "zapatos",
         "color": "Verde",
         "precio": 50,
+        "stock": 2,
         "imagen": "https://img.freepik.com/fotos-premium/botas-goma_739536-3079.jpg?w=740",
         "descripcion": "Botas para mujer verdes altas para invierno"
     },
@@ -59,6 +65,7 @@
         "categoria": "decoracion",
         "color": "Negro",
         "precio": 10.5,
+        "stock": 10,
         "imagen": "https://img.freepik.com/foto-gratis/decoracion-lampara_1203-7742.jpg?w=740&t=st=1679972586~exp=1679973186~hmac=b1105a49ec74d86c1563cfca8783265bcb3695aede480717eb7cd7b3cec342aa",
         "descripcion": "Lampara para decoracion de exteriores"
     },
@@ -68,6 +75,7 @@
         "categoria": "accesorios",
         "color": "Camel",
         "precio": 40.5,
+        "stock": 3,
         "imagen": "https://img.freepik.com/foto-gratis/sombrero-fieltro_1101-691.jpg?w=740&t=st=1679972714~exp=1679973314~hmac=24912d9f2a5e026268266c1ce7c77531f8315ec07beb6fb63a9c8f9759df73ad",
         "descripcion": "Sombrero para hombre con cinta cafe"
     },
@@ -77,6 +85,7 @@
         "categoria": "zapatos",
         "color": "Verde",
         "precio": 30.5,
+        "stock": 5,
         "imagen": "https://img.freepik.com/fotos-premium/zapatos-primavera-cuero-mujer-botas-verdes-bolso-cuero-enfoque-selectivo-zapatos-mujer_173815-37343.jpg?w=740",
         "descripcion": "El calzado deportivo o zapatillas de deporte es un tipo de calzado que se utiliza"
     },
@@ -86,6 +95,7 @@
         "categoria": "accesorios",
         "color": "Negra",
         "precio": 10.5,
+        "stock": 4,
         "imagen": "https://img.freepik.com/foto-gratis/cartera-cuero-aislado-blanco_1232-1814.jpg?w=1380&t=st=1680379899~exp=1680380499~hmac=4b5fc52ff217b8b8deb1e8e769b9b357d36a1fc29932b0b59e572fa4d03d71a8",
         "descripcion": "1. m. Tira, especialmente de cuero y en general provista de una hebilla, que se usa para sujetar o ceñir a la cintura una prenda de vestir. "
     },
@@ -95,6 +105,7 @@
         "categoria": "decoracion",
         "color": "Varios",
         "precio": 20.5,
+        "stock": 5,
         "imagen": "https://img.freepik.com/foto-gratis/bodegon-objetos-antiguos_23-2150244572.jpg?w=740&t=st=1680379977~exp=1680380577~hmac=c7a8ee2ada78a773ad064612b2d85b2b4ef3d48549889c5acf5790187cbeb712",
         "descripcion": " Recipiente, generalmente de barro cocido, que suele tener un agujero en la parte inferior, y que, lleno de tierra, sirve para cultivar plantas."
     },
@@ -104,6 +115,7 @@
         "categoria": "hogar",
         "color": "Blanco",
         "precio": 42.20,
+        "stock": 50,
         "imagen": "https://img.freepik.com/psd-gratis/elementos-vajilla-estante-madera_176382-1729.jpg?w=1380&t=st=1680380054~exp=1680380654~hmac=cf96f29dcc6c04c64cf9e864f90723f0652608a33bb87a1575f7aef9d0b86c63",
         "descripcion": "La silla es un mueble que suele tener un respaldo, generalmente cuenta con tres o cuatro apoyos y su finalidad es la de servir de asiento a una persona.​ "
     },
@@ -113,6 +125,7 @@
         "categoria": "hogar",
         "color": "Negro",
         "precio": 16.26,
+        "stock": 10,
         "imagen": "https://img.freepik.com/foto-gratis/lamparas-modernas-decorativas_23-2148164840.jpg?w=1380&t=st=1680380148~exp=1680380748~hmac=1bd89a27300f0243b0846757ae993a50ddafb04695a3d4fcca453bbd16830059",
         "descripcion": "Una mesa es un mueble compuesto por un mínimo de una tabla lisa que es sostenida por una o más patas (también llamadas pies)."
     },
@@ -122,6 +135,7 @@
         "categoria": "zapatos",
         "color": "Gris",
         "precio": 30,
+        "stock": 3,
         "imagen": "https://img.freepik.com/foto-gratis/zapatos-moda-zapatillas_1203-7529.jpg?w=1380&t=st=1680380219~exp=1680380819~hmac=7e7b687e8acd39c68be93ba4ce48f7fb51bda98cdf4839cb6dac2975167406f8",
         "descripcion": "Zapatos deportivos para Hombre"
     },
@@ -131,6 +145,7 @@
         "categoria": "decoracion",
         "color": "Negro",
         "precio": 10.5,
+        "stock": 4,
         "imagen": "https://img.freepik.com/psd-gratis/marco-vacio-pared_53876-94073.jpg?w=1380&t=st=1680380432~exp=1680381032~hmac=53f644774e2ccc90499d0653fa3361f84ea6627bec427e6803c07c7bdd30fe28",
         "descripcion": "Cuadro personalizado"
     },
@@ -140,6 +155,7 @@
         "categoria": "accesorios",
         "color": "Verde",
         "precio": 20.5,
+        "stock": 7,
         "imagen": "https://img.freepik.com/psd-gratis/maqueta-sombrero-cabeza-mujer_53876-98657.jpg?w=826&t=st=1680380335~exp=1680380935~hmac=3b535d0313e6fb18efc05a3dae530eba44c666736a1b291b5fa359d4d95456f8",
         "descripcion": "Sombrero para Mujer "
     }

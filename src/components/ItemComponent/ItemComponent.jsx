@@ -9,18 +9,16 @@ export const ItemComponent = ({producto}) => {
     <div className="col-md-3 mt-3">
     <Card>
     <Card.Img style={{height:300}} variant="top" src={ producto.imagen }  />
-    <Card.Body style={{height:250}}>
+    <Card.Body style={{height:200}}>
       <Card.Title>{producto.referencia } </Card.Title>
       <Card.Text>{ producto.categoria } </Card.Text>
       <Card.Text>Color: {  producto.color } </Card.Text>
-      <Link to = {`details/${producto.id}`}>Detalle ... </Link>
-      <Card.Text>
-      </Card.Text>
-      
+      <Card.Text>Disponibles: {  producto.stock } </Card.Text>
+      <Card.Text><Link to = {`details/${producto.id}`}>Mas detalles </Link></Card.Text>
     </Card.Body>
     <Card.Footer>
       <small className="text-muted">Ultima actualizacion hace 3 minutos</small>
-    </Card.Footer>
+    </Card.Footer>  
     </Card>
     </div>
   )

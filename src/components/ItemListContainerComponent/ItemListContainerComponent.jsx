@@ -16,7 +16,7 @@ export const ItemListContainerComponent = () =>{
 
   return (
     <div className='container'>
-      <h1 className='title text-center mt-2 mb-3'>Listado de categorias general</h1>
+      <h5 className='title text-center mt-2 mb-3'>Listado de categorias general</h5>
         <ItemListComponent productos={productos} />
     </div>
   )

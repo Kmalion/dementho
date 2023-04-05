@@ -1,45 +1,51 @@
-import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import data from '../components/productos.json'
-import { Card, Col } from 'react-bootstrap'
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import data from "../components/productos.json";
+import { Card, Col } from "react-bootstrap";
+import { CountItem } from "../components/CountItem/CountItem";
+import {BsFillArrowLeftCircleFill} from "react-icons/bs"
 
 export const ItemDetailsContainer = () => {
-    
-    const {productoId} = useParams();
-    console.log(productoId); 
-    const [items] = useState(data);
-    console.log("data",items);
-    console.log(data);
+  const { productoId } = useParams();
+  console.log(productoId);
+  const [items, setItems] = useState({});
 
-    const resultado = items.filter(e => e.id === productoId)
-    console.log(resultado); 
+  React.useEffect(() => {
+    setItems(data.filter((e) => e.id == productoId)[0]);
+  }, [productoId]);
 
-    return (
+const onAdd = (cantidad) => {
+  console.log(`Compraste ${cantidad} unidades `);
+}
 
-        <div className="row mt-5">
-            
-        {
-            
+  return (
+    <div className="row mt-4">
+      {
         <Col>
-        <h2>Detalle producto {resultado.id}</h2>
-        <Card >
-        <Card.Img style={{height:300}} variant="top" src={ resultado.imagen }  />
-        <Card.Body style={{height:300}}>
-          <Card.Title>{resultado.referencia } </Card.Title>
-          <Card.Text>{ resultado.categoria } </Card.Text>
-          <Card.Text>Color: {  resultado.color } </Card.Text>
-          <Card.Text>$ { resultado.precio } </Card.Text>
-          <Card.Text>
-          { resultado.descripcion }
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Ultima actualizacion hace 3 minutos</small>
-        </Card.Footer>
-        <Link to={'/'}>Regresar</Link>
-        </Card>
+          <Card>
+            <Card.Img
+              style={{ height: 330, width: 400 }}
+              variant="top"
+              src={items.imagen}
+            />
+            <Card.Body style={{ height: 420, width: 400 }}>
+              <Card.Title>{items.referencia} </Card.Title>
+              <Card.Text>{items.categoria} </Card.Text>
+              <Card.Text>Color: {items.color} </Card.Text>
+              <Card.Text>$ {items.precio} </Card.Text>
+              <Card.Text>{items.descripcion}</Card.Text>
+              <Card.Text>Disponibles: {  items.stock } </Card.Text>
+              <CountItem initial={1} stock={items.stock} onAdd={onAdd}></CountItem>
+              <p class="text-secondary mt-3"><Link to={"/"}><BsFillArrowLeftCircleFill size={30}/></Link></p>  
+            </Card.Body>
+            <Card.Footer>
+              <small className="text-muted mt-1">
+                Ultima actualizacion hace 3 minutos
+              </small>
+            </Card.Footer>
+          </Card>
         </Col>
-        }
-        </div>
-  )
+      }
+    </div>
+  );
 };

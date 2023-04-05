@@ -1,18 +1,27 @@
 import React from 'react'
 import { Navbar, Nav, Container} from 'react-bootstrap'
 import { CartWidgetComponent } from '../CartWidgetComponent';
-import { NavItems } from './NavItems'
+import { NavItems} from './NavItems'
+import { Link } from 'react-router-dom';
 import './NavItem.css'
+
+
 
 
 
 export function NavBarComponent() {
   return (
     <>
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand> 
-            <NavItems styles="text-decoration:none" label="DEMENTHO" src="/"/></Navbar.Brand>
+        <Navbar.Brand> <Link to={"/"}>
+          <img
+              src="https://www.dementho.com/img/dementho-logo-1539136727.jpg"
+              width="200"
+              height="50"
+              className="d-inline-block align-top"
+              alt="Dementho logo"
+            /></Link></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link><NavItems label="Zapatos" src='category/zapatos'/></Nav.Link>
             <Nav.Link><NavItems label="Accesorios" src="category/accesorios"/></Nav.Link>
