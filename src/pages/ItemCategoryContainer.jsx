@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Card, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import data from '../components/productos.json'
 
 
@@ -27,9 +28,8 @@ export const ItemCategoryContainer = () => {
       <Card.Text>{ e.categoria } </Card.Text>
       <Card.Text>Color: {  e.color } </Card.Text>
       <Card.Text>$ { e.precio } </Card.Text>
-      <Card.Text>
-      { e.descripcion }
-      </Card.Text>
+      <Card.Text>Disponibles: {  e.stock } </Card.Text>
+      <Card.Text><Link to = {`details/${e.id}`}>Mas detalles </Link></Card.Text>
     </Card.Body>
     <Card.Footer>
       <small className="text-muted">Ultima actualizacion hace 3 minutos</small>
