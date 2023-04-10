@@ -3,13 +3,17 @@ import { Navbar, Nav, Container} from 'react-bootstrap'
 import { CartWidgetComponent } from '../CartWidgetComponent';
 import { NavItems} from './NavItems'
 import { Link } from 'react-router-dom';
+
 import './NavItem.css'
 
 
 
 
 
-export function NavBarComponent() {
+export function NavBarComponent({onAdd}) {
+   
+    console.log(`Compraste NAvbar ${onAdd} unidades `);
+  
   return (
     <>
     <Navbar bg="light" variant="light">
@@ -27,7 +31,7 @@ export function NavBarComponent() {
             <Nav.Link><NavItems label="Accesorios" src="category/accesorios"/></Nav.Link>
             <Nav.Link><NavItems label="Decoracion" src="category/decoracion"/></Nav.Link>
             <Nav.Link><NavItems label="Hogar" src="/category/hogar"/></Nav.Link>
-            <Nav.Link><CartWidgetComponent/> <NavItems label=" Carrito" src="/carrito"/></Nav.Link>
+            <Nav.Link><CartWidgetComponent/> <NavItems  src="/carrito"/><p>{onAdd}</p></Nav.Link>
           </Nav>
         </Container>
       </Navbar>

@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react'
 import { ItemListComponent } from '../ItemList/ItemListComponent';
-import { pedirProductos } from './pedirProductos';
+import {collection, getFirestore, getDocs} from "firebase/firestore"
 
 export const ItemListContainerComponent = () =>{
 
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-    pedirProductos()
-      .then((res) => {
-        setProductos(res);
-      })
+    const db = getFirestore();
+    const itemsCollection = collection(db, "productos");
+    getDocs(itemsCollection)
+    .then (productos => {
+      if(productos.length === 0){
+        console.log("No hay productos")
+      }
+      setProductos(productos.docs.map(doc => ({id: doc.id, ...doc.data()})))
+    }
+      )
+
   }, [])
   
 
