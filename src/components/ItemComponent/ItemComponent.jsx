@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 export const ItemComponent = ({producto}) => {
     
   return (
-    <div className="col-md-3 mt-3">
-    <Card>
-    <Card.Img style={{height:300}} variant="top" src={ producto.imagen }  />
+    <div className="col-md-3 mt-2">
+    <Card  class="card bg-secondary mb-3" style={{ width: '18rem' }}>
+    <Card.Img style={{height:'18rem',  width: '18rem', backgroundColor:'white'}} variant="top" src={ producto.imagen }  />
     <Card.Body style={{height:200}}>
       <Card.Title>{producto.referencia } </Card.Title>
       <Card.Text>{ producto.categoria } </Card.Text>
