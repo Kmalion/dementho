@@ -31,7 +31,7 @@ export function NavBarComponent({onAdd}) {
             <Nav.Link><NavItems label="Accesorios" src="category/accesorios"/></Nav.Link>
             <Nav.Link><NavItems label="Decoracion" src="category/decoracion"/></Nav.Link>
             <Nav.Link><NavItems label="Hogar" src="/category/hogar"/></Nav.Link>
-            <Nav.Link><CartWidgetComponent/> <NavItems label="Carrito" src="/carrito"/></Nav.Link>
+            <Nav.Link><CartWidgetComponent/> <NavItems label="Carrito" src="/cart"/></Nav.Link>
           </Nav>
         </Container>
       </Navbar>

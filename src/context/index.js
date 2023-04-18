@@ -1,1 +1,1 @@
-export * from "./CartContext.jsx"
+export * from './CartContext'
