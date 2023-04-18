@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getFirestore, getDoc, doc} from "firebase/firestore"
-import { Card, Col } from "react-bootstrap";
+import { Card, Col, Image } from "react-bootstrap";
 import { CountItem } from "../components/CountItem/CountItem";
 import {BsFillArrowLeftCircleFill} from "react-icons/bs"
 
@@ -26,16 +26,17 @@ const onAdd = (cantidad) => {
 }
 
   return (
+
     <div className="row mt-4">
       {
         <Col>
           <Card>
             <Card.Img
-              style={{ height: 300, width: 400 }}
+              style={{ height: 300, width: '29rem' }}
               variant="top"
               src={productos.imagen}
             />
-            <Card.Body style={{ height: 350, width: 400 }}>
+            <Card.Body style={{ height: 500, width: 300 }}>
               <Card.Title>{productos.referencia} </Card.Title>
               <Card.Text>{productos.categoria} </Card.Text>
               <Card.Text>Color: {productos.color} </Card.Text>
@@ -52,7 +53,16 @@ const onAdd = (cantidad) => {
             </Card.Footer>
           </Card>
         </Col>
+        
+        
       }
+    <Col>
+    <Card.Img
+              style={{ height: '50rem', width: '50rem' }}
+              variant="top"
+              src={'https://www.dementho.com/img/cms/Captura%20de%20pantalla%202018-12-12%20a%20las%201-21-52%20p-m-.png'}
+            />
+    </Col>
     </div>
   );
 };
