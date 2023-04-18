@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getFirestore, getDoc, doc} from "firebase/firestore"
-import { Card, Col, Image } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import { CountItem } from "../components/CountItem/CountItem";
 import {BsFillArrowLeftCircleFill} from "react-icons/bs"
+import { useCartContext } from "../context/CartContext";
 
 export const ItemDetailsContainer = () => {
   const [productos, setProductos] = useState({});
   const { productoId } = useParams();
+  const {addProducto} = useCartContext();
   
   useEffect(() => {
     const db = getFirestore();
@@ -19,10 +21,11 @@ export const ItemDetailsContainer = () => {
   
   
   
-  
+  const [goToCart, setGoToCart] = useState(false);
 
 const onAdd = (cantidad) => {
-  console.log(`Compraste ${cantidad} unidades `);
+  setGoToCart(true);
+  addProducto(productos, cantidad)
 }
 
   return (

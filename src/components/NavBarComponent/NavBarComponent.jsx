@@ -12,7 +12,7 @@ import './NavItem.css'
 
 export function NavBarComponent({onAdd}) {
    
-    console.log(`Compraste NAvbar ${onAdd} unidades `);
+    console.log(`Compraste Navbar ${onAdd} unidades `);
   
   return (
     <>
@@ -31,7 +31,7 @@ export function NavBarComponent({onAdd}) {
             <Nav.Link><NavItems label="Accesorios" src="category/accesorios"/></Nav.Link>
             <Nav.Link><NavItems label="Decoracion" src="category/decoracion"/></Nav.Link>
             <Nav.Link><NavItems label="Hogar" src="/category/hogar"/></Nav.Link>
-            <Nav.Link><CartWidgetComponent/> <NavItems  src="/carrito"/><p>{onAdd}</p></Nav.Link>
+            <Nav.Link><CartWidgetComponent/> <NavItems label="Carrito" src="/carrito"/></Nav.Link>
           </Nav>
         </Container>
       </Navbar>
