@@ -1,35 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import {collection, getFirestore, getDocs} from "firebase/firestore"
+import { getFirestore, getDoc, doc} from "firebase/firestore"
 import { Card, Col } from "react-bootstrap";
 import { CountItem } from "../components/CountItem/CountItem";
 import {BsFillArrowLeftCircleFill} from "react-icons/bs"
 
 export const ItemDetailsContainer = () => {
-  const [productos, setProductos] = useState([]);
-
+  const [productos, setProductos] = useState({});
+  const { productoId } = useParams();
+  
   useEffect(() => {
     const db = getFirestore();
-    const itemsCollection = collection(db, "productos");
-    getDocs(itemsCollection)
-    .then (productos => {
-      if(productos.length === 0){
-        console.log("No hay productos")
-      }
-      setProductos(productos.docs.map(doc => ({id: doc.id, ...doc.data()})))
-    }
-      )
+    const queryDoc = doc(db, 'productos', productoId);
+    getDoc(queryDoc)
+    .then (res => setProductos({ id: res.id, ...res.data()}))
 
   }, [])
   
-  const { productoId } = useParams();
-  console.log(productoId);
-  const [items, setItems] = useState({});
-
-  React.useEffect(()=>{
-    setItems(productos.filter(e => e.id === productoId),[0])
-  },[productos])
-  console.log(items);
+  
   
   
 
@@ -45,22 +33,22 @@ const onAdd = (cantidad) => {
             <Card.Img
               style={{ height: 300, width: 400 }}
               variant="top"
-              src={items.imagen}
+              src={productos.imagen}
             />
             <Card.Body style={{ height: 350, width: 400 }}>
-              <Card.Title>{items.referencia} </Card.Title>
-              <Card.Text>{items.categoria} </Card.Text>
-              <Card.Text>Color: {items.color} </Card.Text>
-              <Card.Text>$ {items.precio} </Card.Text>
-              <Card.Text>{items.descripcion}</Card.Text>
-              <Card.Text>Disponibles: {  items.stock } </Card.Text>
-              <CountItem initial={1} stock={items.stock} onAdd={onAdd}></CountItem>
+              <Card.Title>{productos.referencia} </Card.Title>
+              <Card.Text>{productos.categoria} </Card.Text>
+              <Card.Text>Color: {productos.color} </Card.Text>
+              <Card.Text>$ {productos.precio} </Card.Text>
+              <Card.Text>{productos.descripcion}</Card.Text>
+              <Card.Text>Disponibles: {  productos.stock } </Card.Text>
+              <CountItem initial={1} stock={productos.stock} onAdd={onAdd}></CountItem>
               <p class="text-secondary mt-3"><Link to={"/"}><BsFillArrowLeftCircleFill size={30}/></Link></p>  
             </Card.Body>
             <Card.Footer>
               <small className="text-muted mt-1">
                 Ultima actualizacion hace 3 minutos
-              </small>
+              </small>  
             </Card.Footer>
           </Card>
         </Col>
