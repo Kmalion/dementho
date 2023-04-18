@@ -1,16 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect  } from 'react'
 import { useParams } from 'react-router-dom'
 import { Card, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import data from '../components/productos.json'
+import {collection, getFirestore, getDocs} from "firebase/firestore"
 
 
 
 export const ItemCategoryContainer = () => {
-
+    
+    const [productos, setProductos] = useState([]);
+    useEffect(() => {
+      const db = getFirestore();
+      const itemsCollection = collection(db, "productos");
+      getDocs(itemsCollection)
+      .then (productos => {
+        if(productos.length === 0){
+          console.log("No hay productos")
+        }
+        setProductos(productos.docs.map(doc => ({id: doc.id, ...doc.data()})))
+      }
+        )
+  
+    }, [])
     const { categoryId } = useParams();
-    const [ items ] = useState (data);
-    const resultado = items.filter(e => e.categoria === categoryId);
+    const resultado = productos.filter(e => e.categoria === categoryId);
+    console.log(productos);
 
 
   return (
