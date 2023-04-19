@@ -8,15 +8,6 @@ export const CartProvider = ({children}) => {
   const [cart, setCart] = useState([]);
   
   
-  // Precio Total
-  const precioTotal = () =>{
-    return cart.reduce((prev, act)=> prev + act.cantidad * act.price, 0);
-  }
-  
-  // total de productos
-  const totalProductos = () =>  cart.reduce((acumulador, productoActual)=> acumulador + productoActual.cantidad, 0);
-
-
   //Agregar al carrito
   const addProducto = (item, cantidad) =>{
     let newCart;
@@ -31,7 +22,13 @@ export const CartProvider = ({children}) => {
     setCart(newCart);
   }
 
-  console.log("Carrito: ", cart)
+   // Precio Total
+   const precioTotal = () => {
+    return cart.reduce((prev, act) => prev + act.cantidad * act.precio, 0);
+  }
+  
+  // Total de productos
+  const totalProductos = () =>  cart.reduce((acumulador, productoActual)=> acumulador + productoActual.cantidad, 0);
   
   //Limpiar carrito
   const cleanCarrito = () => setCart([]);

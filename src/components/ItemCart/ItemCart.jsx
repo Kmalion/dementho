@@ -1,45 +1,53 @@
 import React, {useEffect, useState} from 'react'
-import { Button, Card, } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { useCartContext } from '../../context';
 import { getFirestore, getDocs,  collection} from "firebase/firestore"
 
 
 
- export const ItemCart = ({ producto } ) => {
+ export const ItemCart = ({ product } ) => {
+
+  
 
  const { borrarProducto } = useCartContext();
- const [data, setData] = useState([]);
+ 
+ const [ setData] = useState([]);
+ 
  
  useEffect(() => {
    const db = getFirestore();
    const itemsCollection = collection(db, 'productos');
    getDocs(itemsCollection)
-   .then (res => setData(res.docs.map(producto =>({id: producto.id, ...producto.data() }))))
-   const resultado = data.filter(e => e.id === producto.id);
-    console.log(resultado);
- }, [data.id])
-
-
+   .then (res => setData(res.docs.map(product =>({id: product.id, ...product.data() }))))
+  
+  
+ }, [])
+  
 
   return (
     <div className='container-md mt-3 '>
-      <Card>
+      <div className="row">
+
       <Card.Img
-        style={{ height: 200, width: 200 }}
+        style={{ height: 300, width: 300 }}
         variant="right"
-        src={data.imagen}
+        src={product.imagen}
       />
-      <Card.Body style={{ height: 250, width: '10rem' }}>
-        <Card.Title>Referencia: {data.referencia} </Card.Title>
-        <Card.Text>Categoria: {data.categoria} </Card.Text>
-        <Card.Text>Precio unitario: $ {data.precio} </Card.Text>
-        <Card.Text>Cantidad: $ {data.cantidad} </Card.Text>
-        <Card.Text>Subtotal: {data.cantidad * data.precio}</Card.Text>
+      
+      <div className="col">
+      <Card.Body border="primary" style={{ height: 200, width: 400 }}>
+        <Card.Title>Referencia: {product.referencia} </Card.Title>
+        <Card.Text>Categoria: {product.categoria} </Card.Text>
+        <Card.Text>Precio unitario: $ {product.precio} </Card.Text>
+        <Card.Text>Cantidad: {product.cantidad} </Card.Text>
+        <Card.Text>Subtotal: ${product.cantidad * product.precio}</Card.Text>
       </Card.Body>
       <Card.Footer>
-      <Button onClick={()=> borrarProducto(data.id)}>Eliminar</Button>
+      <Button onClick={()=> borrarProducto(product.id)}>Eliminar</Button>
       </Card.Footer>
-      </Card>
+  
+      </div>
+      </div>
   </div>
   )
 }

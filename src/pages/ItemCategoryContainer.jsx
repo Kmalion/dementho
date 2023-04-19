@@ -24,7 +24,7 @@ export const ItemCategoryContainer = () => {
     }, [])
     const { categoryId } = useParams();
     const resultado = productos.filter(e => e.categoria === categoryId);
-    console.log(productos);
+    
 
 
   return (
