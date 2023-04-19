@@ -45,7 +45,7 @@ import { getFirestore, getDocs,  collection} from "firebase/firestore"
       <Card.Footer>
       <Button onClick={()=> borrarProducto(product.id)}>Eliminar</Button>
       </Card.Footer>
-  
+      
       </div>
       </div>
   </div>

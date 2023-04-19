@@ -4,7 +4,7 @@ import { Inicio, ItemCategoryContainer} from '../pages';
 import { ItemDetailsContainer } from "../pages/ItemDetailsContainer";
 import { CartProvider } from "../context/CartContext";
 import { Cart } from "../components/Cart/Cart";
-
+import { BannerFooter } from "../components/BannerFooter/BannerFooter";
 
 
 
@@ -24,6 +24,7 @@ export const MainRoutes = () => {
             <Route exact path="/cart" element={<Cart />}/>
         </Routes>
       </div>
+      <BannerFooter></BannerFooter>
       </CartProvider>
     </Router>
   )
