@@ -7,7 +7,6 @@ import { BsFillCartFill } from "react-icons/bs";
 
 export const Cart = () => {
   const { cart, precioTotal } = useCartContext();
-  console.log(precioTotal);
 
   if (cart.length === 0) {
     return (

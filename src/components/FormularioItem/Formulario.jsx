@@ -1,15 +1,45 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useCartContext } from "../../context/CartContext";
+import {
+  addDoc,
+  collection,
+  getFirestore,
+  updateDoc,
+} from "firebase/firestore";
 
 export const Formulario = () => {
+  const { cart, precioTotal } = useCartContext();
+
+  const totalPagado = precioTotal();
+  console.log(totalPagado);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const capturarDatos = (data) => {
+  const capturarDatos = (data, totalPagado, product) => {
     console.log(data);
+    const ordenDeCompra = {
+      ...{ cart },
+      ...{ data },
+    };
+    console.log(ordenDeCompra);
+
+    const db = getFirestore();
+    const ordenCollection = collection(db, "ordenes");
+    addDoc(ordenCollection, ordenDeCompra).then(({ id }) => console.log(id));
+    data.push({
+      totalPagado: totalPagado,
+    });
+
+    const productDoc = collection(db, "productos", product.id);
+    product.forEach((stock) => {
+      updateDoc(productDoc, { stock: product.stock - cart.stock });
+    });
   };
+
   return (
     <div>
       <h3 class="text-primary text-center mt-4">Formulario de compra</h3>
@@ -60,7 +90,7 @@ export const Formulario = () => {
                 <label class="form-label mt-4">Email: </label>
                 <input
                   class="form-control"
-                  type="email"
+                  type="text"
                   {...register("email", {
                     required: true,
                   })}
@@ -73,7 +103,7 @@ export const Formulario = () => {
                 <label>Telefono: </label>
                 <input
                   class="form-control"
-                  type="tel"
+                  type="number"
                   {...register("telefono", {
                     required: true,
                     maxLength: 14,
@@ -87,7 +117,7 @@ export const Formulario = () => {
                 <label>Tarjeta de credito: </label>
                 <input
                   class="form-control"
-                  type="cc-number"
+                  type="number"
                   {...register("tarjetaPago", {
                     required: true,
                     maxLength: 16,
@@ -100,11 +130,12 @@ export const Formulario = () => {
                 )}
               </div>
               <button
+                onClick={capturarDatos}
                 type="submit"
                 value="Enviar"
                 class="justify-content-center btn btn-primary d-flex  mt-3"
               >
-                Comprar
+                ¡ Comprar !
               </button>
             </div>
           </fieldset>
